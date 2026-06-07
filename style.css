@@ -1,95 +1,106 @@
 .container{
     width:100%;
-    max-width:360px;
+    max-width:330px;
     text-align:center;
-    padding:10px 16px 30px;
+    padding:8px 16px 25px;
 }
 
 .language{
-    font-size:13px;
+    font-size:12px;
     color:#65676b;
-    margin-top:6px;
+    margin-top:8px;
 }
 
 .logo-area{
-    margin-top:28px;
-    margin-bottom:40px;
+    margin-top:25px;
+    margin-bottom:90px; /* BIG EMPTY SPACE */
 }
 
 .logo-area img{
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     object-fit:contain;
 }
 
 .input-box{
     width:100%;
-    height:52px;
+    height:48px;
 
-    border:1px solid #d8dadd;
-    border-radius:14px;
+    border:1px solid #dadde1;
+    border-radius:12px;
 
-    background:white;
+    background:#fff;
 
     padding:0 14px;
 
-    font-size:16px;
+    font-size:15px;
+    color:#1c1e21;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
+
+    outline:none;
+}
+
+.input-box::placeholder{
+    color:#65676b;
+    font-size:15px;
 }
 
 .login-btn{
     width:100%;
-    height:50px;
-
-    border:none;
-    border-radius:25px;
+    height:46px;
 
     background:#1877f2;
 
+    border:none;
+    border-radius:24px;
+
     color:white;
 
-    font-size:18px;
+    font-size:16px;
     font-weight:500;
 
-    margin-top:4px;
+    margin-top:2px;
 }
 
 .forgot{
     display:block;
 
-    margin-top:22px;
+    margin-top:18px;
 
-    font-size:16px;
     color:#050505;
 
     text-decoration:none;
+
+    font-size:14px;
+    font-weight:400;
 }
 
 .create-account{
     width:100%;
-    height:50px;
+    height:46px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    margin-top:90px;
+    margin-top:55px; /* MUCH SMALLER GAP */
 
     border:1px solid #1877f2;
-    border-radius:25px;
+    border-radius:24px;
 
     color:#1877f2;
 
-    font-size:16px;
-    font-weight:600;
-
     text-decoration:none;
+
+    font-size:15px;
+    font-weight:600;
 }
 
 .footer{
-    margin-top:20px;
+    margin-top:18px;
 
-    font-size:11px;
     color:#8a8d91;
+
+    font-size:10px;
 }

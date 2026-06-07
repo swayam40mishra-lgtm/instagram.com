@@ -1,18 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+    text-align:center;
+    padding:12px 18px 30px;
+}
+
 /* Language */
 
 .language{
     font-size:13px;
     color:#737373;
     font-weight:400;
-
-    margin-top:25px;
+    margin-top:15px;
 }
 
-/* Logo Section */
+/* Logo */
 
 .logo-area{
-    margin-top:70px;      /* More space above logo */
-    margin-bottom:170px;  /* Huge space before username field */
+    margin-top:40px;
+    margin-bottom:120px;
 }
 
 .logo-area img{
@@ -21,6 +41,58 @@
     object-fit:contain;
     display:block;
     margin:auto;
+}
+
+/* Inputs */
+
+.input-box{
+    width:100%;
+    height:54px;
+
+    border:1px solid #d9d9d9;
+    border-radius:16px;
+
+    background:#ffffff;
+
+    padding:0 18px;
+
+    font-size:14px;
+    color:#262626;
+
+    margin-bottom:12px;
+
+    outline:none;
+}
+
+.input-box::placeholder{
+    color:#8e8e93;
+    font-size:14px;
+    font-weight:400;
+}
+
+.input-box:focus{
+    border-color:#cfcfcf;
+}
+
+/* Login Button */
+
+.login-btn{
+    width:100%;
+    height:50px;
+
+    border:none;
+    border-radius:25px;
+
+    background:#1877f2;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:500;
+
+    cursor:pointer;
+
+    margin-top:4px;
 }
 
 /* Forgot Password */
@@ -48,7 +120,7 @@
     align-items:center;
     justify-content:center;
 
-    margin-top:25px; /* Was 85px - now much closer */
+    margin-top:85px;
 
     border:1.5px solid #1877f2;
     border-radius:24px;
@@ -66,15 +138,15 @@
 /* Footer */
 
 .footer{
-    margin-top:12px; /* Almost touching Create Account */
+    margin-top:30px;
 
     color:#8e8e93;
 
     font-size:10px;
 
-    line-height:14px;
+    line-height:18px;
 }
 
 .footer p{
-    margin-top:0;
+    margin-top:4px;
 }

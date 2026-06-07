@@ -25,19 +25,19 @@ body{
     font-size:13px;
     color:#737373;
     font-weight:400;
-    margin-top:15px;
+    margin-top:5px;
 }
 
 /* Logo */
 
 .logo-area{
-    margin-top:40px;
-    margin-bottom:120px;
+    margin-top:60px;
+    margin-bottom:60px;
 }
 
 .logo-area img{
-    width:150px;
-    height:150px;
+    width:140px;
+    height:140px;
     object-fit:contain;
     display:block;
     margin:auto;

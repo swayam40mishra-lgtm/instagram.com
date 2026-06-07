@@ -5,51 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
+    <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <p class="language">English (UK)</p>
+        <!-- Language -->
+        <p class="language">English (UK)</p>
 
-    <div class="logo-area">
-        <img src="logo.png" alt="Logo">
+        <!-- Logo -->
+        <div class="logo-area">
+            <img src="logo.png" alt="Logo">
+        </div>
+
+        <!-- Login Form -->
+        <input
+            type="text"
+            class="input-box"
+            placeholder="Phone number, username or email"
+        >
+
+        <input
+            type="password"
+            class="input-box"
+            placeholder="Password"
+        >
+
+        <button class="login-btn">
+            Log In
+        </button>
+
+        <!-- Forgot Password -->
+        <a href="#" class="forgot">
+            Forgotten password?
+        </a>
+
+        <!-- Create Account -->
+        <a href="#" class="create-account">
+            Create new account
+        </a>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Language • Privacy • Terms • Help</p>
+            <p>© Swayam Mishra</p>
+        </div>
+
     </div>
 
-    <input
-        type="text"
-        class="input-box"
-        placeholder="Phone number, username or email"
-    >
-
-    <input
-        type="password"
-        class="input-box"
-        placeholder="Password"
-    >
-
-    <button class="login-btn">
-        Log In
-    </button>
-
-    <a href="#" class="forgot">
-        Forgotten password?
-    </a>
-
-    <a href="#" class="create-account">
-        Create new account
-    </a>
-
-    <div class="footer">
-        <p>Language • Privacy • Terms • Help</p>
-        <p>© Swayam Mishra</p>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>

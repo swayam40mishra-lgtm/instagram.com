@@ -43,32 +43,70 @@ body{
     margin:auto;
 }
 
+/* Floating Label */
 
-.eye-btn {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #8e8e8e;
+.floating-group{
+    position:relative;
+    margin-bottom:12px;
 }
 
-.eye-btn:hover {
-    color: #555;
+.floating-group label{
+    position:absolute;
+    left:18px;
+    top:17px;
+    color:#8e8e93;
+    font-size:14px;
+    pointer-events:none;
+    transition:0.2s ease;
+    background:#fff;
+    padding:0 4px;
 }
 
-.eye-btn svg {
-    width: 22px;
-    height: 22px;
+.floating-input:focus + label,
+.floating-input:not(:placeholder-shown) + label{
+    top:-8px;
+    font-size:12px;
+}
+
+/* Password Wrapper */
+
+.password-wrapper{
+    position:relative;
+    width:100%;
+}
+
+.password-wrapper .input-box{
+    padding-right:50px;
+}
+
+/* Eye Button */
+
+.eye-btn{
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    color:#8e8e8e;
+    z-index:10;
+}
+
+.eye-btn:hover{
+    color:#555;
+}
+
+.eye-btn svg{
+    width:22px;
+    height:22px;
 }
 
 /* Inputs */
 
 .input-box{
-    width:150%;
+    width:100%;
     height:54px;
 
     border:1px solid #d9d9d9;
@@ -121,13 +159,9 @@ body{
 
 .forgot{
     display:block;
-
     margin-top:20px;
-
     text-decoration:none;
-
     color:#050505;
-
     font-size:14px;
     font-weight:400;
 }
@@ -161,11 +195,8 @@ body{
 
 .footer{
     margin-top:30px;
-
     color:#8e8e93;
-
     font-size:10px;
-
     line-height:18px;
 }
 

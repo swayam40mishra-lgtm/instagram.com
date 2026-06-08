@@ -43,6 +43,28 @@ body{
     margin:auto;
 }
 
+
+.eye-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8e8e8e;
+}
+
+.eye-btn:hover {
+    color: #555;
+}
+
+.eye-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
 /* Inputs */
 
 .input-box{

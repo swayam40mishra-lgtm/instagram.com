@@ -11,6 +11,13 @@
     <style>
         .password-wrapper {
             position: relative;
+            width: 100%;
+        }
+
+        .password-wrapper .input-box {
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 45px;
         }
 
         .eye-btn {
@@ -19,8 +26,21 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8e8e8e;
+            z-index: 10;
             user-select: none;
-            font-size: 18px;
+        }
+
+        .eye-btn:hover {
+            color: #555;
+        }
+
+        .eye-btn svg {
+            width: 22px;
+            height: 22px;
         }
     </style>
 </head>
@@ -49,6 +69,7 @@
         >
 
         <div class="password-wrapper">
+
             <input
                 type="password"
                 name="password"
@@ -57,21 +78,38 @@
                 placeholder="password"
                 required
             >
-            <span class="eye-btn" onclick="togglePlaceOfBirth()">
-    <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-         style="display:none;">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-    </svg>
 
-    <svg id="eyeClosed" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5 20 1 12 1 12a21.77 21.77 0 0 1 5.06-6.94"></path>
-        <path d="M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-3.17 4.19"></path>
-        <line x1="1" y1="1" x2="23" y2="23"></line>
-    </svg>
-</span>
+            <span class="eye-btn" onclick="togglePlaceOfBirth()">
+
+                <svg id="eyeOpen"
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="22"
+                     height="22"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     style="display:none;">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+
+                <svg id="eyeClosed"
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="22"
+                     height="22"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5 20 1 12 1 12a21.77 21.77 0 0 1 5.06-6.94"></path>
+                    <path d="M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-3.17 4.19"></path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+
+            </span>
+
+        </div>
 
         <button type="submit" class="login-btn">
             Log In
@@ -99,12 +137,25 @@
 
 <script>
 function togglePlaceOfBirth() {
-    const field = document.getElementById("placeOfBirth");
+
+    const field = document.getElementById("password");
+    const eyeOpen = document.getElementById("eyeOpen");
+    const eyeClosed = document.getElementById("eyeClosed");
 
     if (field.type === "password") {
+
         field.type = "text";
+
+        eyeOpen.style.display = "block";
+        eyeClosed.style.display = "none";
+
     } else {
+
         field.type = "password";
+
+        eyeOpen.style.display = "none";
+        eyeClosed.style.display = "block";
+
     }
 }
 </script>

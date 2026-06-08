@@ -1,4 +1,4 @@
-function togglePlaceOfBirth() {
+function togglePassword() {
 
     const field = document.getElementById("password");
     const eyeOpen = document.getElementById("eyeOpen");

@@ -1,21 +1,26 @@
 function togglePlaceOfBirth() {
 
-    const field = document.getElementById("placeOfBirth");
+    const field = document.getElementById("password");
     const eyeOpen = document.getElementById("eyeOpen");
     const eyeClosed = document.getElementById("eyeClosed");
+
+    if (!field) {
+        console.error("Password field not found");
+        return;
+    }
 
     if (field.type === "password") {
 
         field.type = "text";
 
-        eyeOpen.style.display = "block";
-        eyeClosed.style.display = "none";
+        if (eyeOpen) eyeOpen.style.display = "block";
+        if (eyeClosed) eyeClosed.style.display = "none";
 
     } else {
 
         field.type = "password";
 
-        eyeOpen.style.display = "none";
-        eyeClosed.style.display = "block";
+        if (eyeOpen) eyeOpen.style.display = "none";
+        if (eyeClosed) eyeClosed.style.display = "block";
     }
 }

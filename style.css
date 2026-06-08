@@ -68,7 +68,7 @@ body{
 /* Inputs */
 
 .input-box{
-    width:100%;
+    width:150%;
     height:54px;
 
     border:1px solid #d9d9d9;
@@ -154,7 +154,7 @@ body{
     text-decoration:none;
 
     font-size:15px;
-    font-weight:600;
+    font-weight:300;
 }
 
 /* Footer */
